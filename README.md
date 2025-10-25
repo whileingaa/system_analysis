@@ -53,6 +53,8 @@ pip install psutil openai
 
 ### 3. 基础使用示例
 
+运行example.py
+
 ```python
 from core import (
     get_status,
