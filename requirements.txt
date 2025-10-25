@@ -1,0 +1,15 @@
+# 系统监控AI助理 - 依赖包
+
+# 核心依赖
+psutil>=5.9.0          # 系统性能监控
+openai>=1.0.0          # OpenAI API客户端
+
+# 可选依赖（用于UI）
+# streamlit>=1.28.0    # Streamlit UI框架
+# flask>=3.0.0         # Flask Web框架
+# gradio>=4.0.0        # Gradio UI框架
+
+# 开发依赖
+# pytest>=7.4.0        # 单元测试
+# black>=23.0.0        # 代码格式化
+# flake8>=6.1.0        # 代码检查
