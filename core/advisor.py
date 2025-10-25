@@ -34,13 +34,7 @@ class Advisor:
             LLM的回复
         """
         try:
-            # 根据配置的provider选择不同的API调用方式
-            provider = self.llm_config.get("provider", "openai")
-            
-            if provider == "openai":
-                return self._call_openai(messages, system_prompt)
-            else:
-                return f"暂不支持的LLM提供商: {provider}"
+            return self._call_openai(messages, system_prompt)
         except Exception as e:
             return f"调用LLM失败: {str(e)}"
     

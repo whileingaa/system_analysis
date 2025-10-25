@@ -44,7 +44,6 @@ pip install psutil openai
 ```json
 {
   "llm": {
-    "provider": "openai",
     "api_key": "your-actual-api-key",
     "model": "gpt-3.5-turbo",
     "base_url": "https://api.openai.com/v1"
@@ -199,7 +198,6 @@ print(response)
 ```json
 {
   "llm": {
-    "provider": "openai",           // LLM提供商
     "api_key": "your-api-key",      // API密钥
     "model": "gpt-3.5-turbo",       // 模型名称
     "base_url": "https://...",      // API基础URL

@@ -179,7 +179,6 @@ def demo_config():
     config = load_config()
     
     print(f"\n⚙️ 当前配置:")
-    print(f"  LLM提供商: {config.get('llm', {}).get('provider', 'unknown')}")
     print(f"  LLM模型: {config.get('llm', {}).get('model', 'unknown')}")
     print(f"  API配置: {'✅ 已配置' if config.get('llm', {}).get('api_key') not in ['', 'your-api-key-here', None] else '❌ 未配置'}")
     

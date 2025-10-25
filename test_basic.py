@@ -98,7 +98,6 @@ def test_config():
         assert 'llm' in config
         assert 'monitoring' in config
         print(f"✅ 配置加载成功")
-        print(f"   - LLM提供商: {config['llm'].get('provider')}")
         print(f"   - LLM模型: {config['llm'].get('model')}")
         
         return True

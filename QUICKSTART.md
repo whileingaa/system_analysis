@@ -168,7 +168,7 @@ system_analysis/
 
 ### Q: 如何使用其他LLM提供商？
 
-A: 修改 `config/settings.json` 中的 `provider` 和 `base_url`。目前支持OpenAI兼容的API。
+A: 修改 `config/settings.json` 中的 `base_url` 和 `model`。支持OpenAI兼容的API接口。
 
 ### Q: CPU显示为0%是正常的吗？
 

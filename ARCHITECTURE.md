@@ -180,11 +180,9 @@ def get_manager():
 
 ### 2. 工厂模式
 ```python
-# 根据provider选择不同的LLM实现
-if provider == "openai":
+# LLM调用统一通过OpenAI兼容接口
+def _call_llm(self, messages):
     return self._call_openai(messages)
-elif provider == "claude":
-    return self._call_claude(messages)
 ```
 
 ### 3. 外观模式
@@ -200,9 +198,9 @@ def auto_advise(status):
 ```json
 {
   "llm": {
-    "provider": "openai",
     "api_key": "sk-...",
     "model": "gpt-3.5-turbo",
+    "base_url": "https://api.openai.com/v1",
     "temperature": 0.7,
     "max_tokens": 1000
   },
@@ -287,7 +285,7 @@ if not api_key or api_key == "your-api-key-here":
 ## 🔮 扩展点
 
 ### 1. 新增LLM提供商
-在 `advisor.py` 中添加新的 `_call_xxx()` 方法
+在 `advisor.py` 中修改 `_call_openai()` 方法以支持不同的API
 
 ### 2. 新增监控指标
 在 `system_monitor.py` 中添加新的监控函数

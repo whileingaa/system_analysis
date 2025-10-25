@@ -25,7 +25,6 @@ def load_config(config_path: str = "./config/settings.json") -> Dict[str, Any]:
         # 返回默认配置
         return {
             "llm": {
-                "provider": "openai",
                 "api_key": "",
                 "model": "gpt-3.5-turbo",
                 "temperature": 0.7,
